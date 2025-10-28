@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #e5e5e5;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.glass {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.card {
+  padding: 32px;
+  border-radius: 16px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-out;
+}
+
+h2 {
+  font-size: 1.8em;
+  background: linear-gradient(90deg, #00f5ff, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.form-section:hover {
+  box-shadow: inset 0 0 25px rgba(0, 255, 255, 0.1);
+}
+
+label {
+  display: block;
+  margin: 10px 0 6px;
+  font-size: 0.85em;
+  text-align: left;
+  color: #9ee6ff;
+}
+
+input[type=file],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: all 0.3s;
+}
+
+input[type=file]:hover,
+input[type=password]:hover {
+  border-color: #00ffff;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.encrypt {
+  background: linear-gradient(90deg, #007cf0, #00dfd8);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.decrypt {
+  background: linear-gradient(90deg, #00dfd8, #007cf0);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.divider {
+  font-size: 0.8em;
+  color: #ccc;
+  opacity: 0.5;
+  margin: 12px 0;
+}
+
+.note {
+  font-size: 0.75em;
+  opacity: 0.7;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

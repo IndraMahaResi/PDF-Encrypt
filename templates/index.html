@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>🧬 PDF Encryptor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card glass">
+      <h2>🧬PDF Encryptor</h2>
+      <p class="subtitle">Encrypt & Decrypt PDF files with futuristic vibes</p>
+
+
+  <!-- Encrypt Section -->
+  <form action="/encrypt" method="post" enctype="multipart/form-data" class="form-section">
+    <label>📄 Upload PDF untuk Enkripsi</label>
+    <input type="file" name="pdf_file" accept="application/pdf" required>
+    <label>🔑 Password</label>
+    <input type="password" name="password" placeholder="Masukkan sandi..." required>
+    <button type="submit" class="btn encrypt">🚀 Encrypt & Download (PDF)</button>
+  </form>
+
+  <div class="divider">OR</div>
+
+  <!-- Decrypt Section (DIUBAH: name="pdf_file" agar sesuai backend) -->
+  <form action="/decrypt" method="post" enctype="multipart/form-data" class="form-section">
+    <label>💾 Upload PDF terenkripsi (.pdf)</label>
+    <input type="file" name="pdf_file" accept="application/pdf" required>
+    <label>🔐 Password</label>
+    <input type="password" name="password" placeholder="Masukkan sandi..." required>
+    <button type="submit" class="btn decrypt">🪄 Decrypt & Download (PDF)</button>
+  </form>
+
+  <!-- <p class="note">
+    ⚙️ Rule Enkripsi: AES-GCM + ROT47 + XOR(password)<br>
+    ⚠️ Prototype Web3 Encryptor untuk latihan — bukan buat rahasia negara 😎.
+  </p> -->
+</div>
+
+
+  </div>
+</body>
+</html>
