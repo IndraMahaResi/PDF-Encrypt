@@ -1,134 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top right, #0f2027, #203a43, #2c5364);
+  background: radial-gradient(circle at top, #001f2e, #000);
+  color: #e0ffff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
-  color: #e5e5e5;
-  overflow: hidden;
+  margin: 0;
+  padding: 40px 0;
+  overflow-y: auto;
 }
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
+  max-width: 500px;
+  width: 90%;
 }
 
-.glass {
-  backdrop-filter: blur(20px);
+.card.glass {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
-}
-
-.card {
-  padding: 32px;
   border-radius: 16px;
-  max-width: 450px;
-  width: 100%;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
   text-align: center;
-  animation: fadeIn 1s ease-out;
 }
 
-h2 {
-  font-size: 1.8em;
-  background: linear-gradient(90deg, #00f5ff, #4facfe, #00f2fe);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 4px;
+.title-glow {
+  font-family: 'Press Start 2P', cursive;
+  color: #00ffff;
+  text-shadow: 0 0 15px #00e5ff, 0 0 30px #00f5ff;
+  animation: glowPulse 2s infinite alternate;
 }
 
 .subtitle {
-  font-size: 0.9em;
-  opacity: 0.8;
+  font-size: 0.8em;
+  color: #a0f0ff;
   margin-bottom: 20px;
-}
-
-.form-section {
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 12px;
-  padding: 20px;
-  margin-bottom: 16px;
-  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.05);
-  transition: all 0.3s;
-}
-
-.form-section:hover {
-  box-shadow: inset 0 0 25px rgba(0, 255, 255, 0.1);
 }
 
 label {
   display: block;
-  margin: 10px 0 6px;
-  font-size: 0.85em;
   text-align: left;
-  color: #9ee6ff;
+  margin: 12px 0 6px;
+  font-size: 0.9em;
+  color: #afffff;
 }
 
-input[type=file],
-input[type=password] {
+input[type="file"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin-bottom: 14px;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(0, 255, 255, 0.05);
+  color: #e0ffff;
   border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  transition: all 0.3s;
+  outline: none;
 }
 
-input[type=file]:hover,
-input[type=password]:hover {
-  border-color: #00ffff;
+input::placeholder {
+  color: #77d5ff;
 }
 
 .btn {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
+  margin-top: 12px;
   border: none;
   border-radius: 10px;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 1em;
-  color: #fff;
-  transition: all 0.3s;
+  transition: all 0.2s ease-in-out;
 }
 
-.encrypt {
-  background: linear-gradient(90deg, #007cf0, #00dfd8);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+.btn.encrypt {
+  background: linear-gradient(90deg, #00f5ff, #00c3ff);
+  color: #000;
+  box-shadow: 0 0 10px #00ffff;
 }
 
-.decrypt {
-  background: linear-gradient(90deg, #00dfd8, #007cf0);
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+.btn.decrypt {
+  background: linear-gradient(90deg, #ff00ff, #ff55cc);
+  color: #000;
+  box-shadow: 0 0 10px #ff66ff;
 }
 
 .btn:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ffff;
 }
 
 .divider {
-  font-size: 0.8em;
-  color: #ccc;
+  margin: 25px 0;
   opacity: 0.5;
-  margin: 12px 0;
+  font-family: 'Press Start 2P', cursive;
+  color: #66ffff;
 }
 
-.note {
-  font-size: 0.75em;
-  opacity: 0.7;
-  margin-top: 20px;
-  line-height: 1.4;
+.howto {
+  margin-top: 35px;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  text-align: left;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.95); }
-  to { opacity: 1; transform: scale(1); }
+.howto h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.9em;
+  color: #00f5ff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.howto ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.howto li {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #b6f7ff;
+  font-size: 0.8em;
+}
+
+.howto .note {
+  font-size: 0.7em;
+  color: #9ee6ff;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.howto-link {
+  color: #00ffff;
+  font-size: 0.7em;
+  text-decoration: none;
+}
+
+.howto-link:hover {
+  text-shadow: 0 0 10px #00ffff;
+}
+
+@keyframes glowPulse {
+  from { text-shadow: 0 0 10px #00eaff, 0 0 20px #00c3ff; }
+  to { text-shadow: 0 0 25px #00ffff, 0 0 40px #00ffff; }
 }

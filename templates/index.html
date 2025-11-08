@@ -1,45 +1,56 @@
 <!doctype html>
-
 <html lang="id">
 <head>
   <meta charset="utf-8">
-  <title>🧬 PDF Encryptor</title>
+  <title>🧬PDF Encryptor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Font Pixel Futuristik -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
   <div class="container">
     <div class="card glass">
-      <h2>🧬PDF Encryptor</h2>
-      <p class="subtitle">Encrypt & Decrypt PDF files with futuristic vibes</p>
+      <h2 class="title-glow">🧬 PDF Encryptor</h2>
 
 
-  <!-- Encrypt Section -->
-  <form action="/encrypt" method="post" enctype="multipart/form-data" class="form-section">
-    <label>📄 Upload PDF untuk Enkripsi</label>
-    <input type="file" name="pdf_file" accept="application/pdf" required>
-    <label>🔑 Password</label>
-    <input type="password" name="password" placeholder="Masukkan sandi..." required>
-    <button type="submit" class="btn encrypt">🚀 Encrypt & Download (PDF)</button>
-  </form>
+      <!-- Encrypt Section -->
+      <form action="/encrypt" method="post" enctype="multipart/form-data" class="form-section">
+        <label>📄 Upload PDF untuk Enkripsi</label>
+        <input type="file" name="pdf_file" accept="application/pdf" required>
+        <label>🔑 Password</label>
+        <input type="password" name="password" placeholder="Masukkan sandi..." required>
+        <button type="submit" class="btn encrypt">🚀 Encrypt & Download</button>
+      </form>
 
-  <div class="divider">OR</div>
+      <div class="divider">OR</div>
 
-  <!-- Decrypt Section (DIUBAH: name="pdf_file" agar sesuai backend) -->
-  <form action="/decrypt" method="post" enctype="multipart/form-data" class="form-section">
-    <label>💾 Upload PDF terenkripsi (.pdf)</label>
-    <input type="file" name="pdf_file" accept="application/pdf" required>
-    <label>🔐 Password</label>
-    <input type="password" name="password" placeholder="Masukkan sandi..." required>
-    <button type="submit" class="btn decrypt">🪄 Decrypt & Download (PDF)</button>
-  </form>
+      <!-- Decrypt Section -->
+      <form action="/decrypt" method="post" enctype="multipart/form-data" class="form-section">
+        <label>💾 Upload PDF terenkripsi (.pdf)</label>
+        <input type="file" name="pdf_file" accept="application/pdf" required>
+        <label>🔐 Password</label>
+        <input type="password" name="password" placeholder="Masukkan sandi..." required>
+        <button type="submit" class="btn decrypt">🪄 Decrypt & Download</button>
+      </form>
 
-  <!-- <p class="note">
-    ⚙️ Rule Enkripsi: AES-GCM + ROT47 + XOR(password)<br>
-    ⚠️ Prototype Web3 Encryptor untuk latihan — bukan buat rahasia negara 😎.
-  </p> -->
-</div>
+      <!-- Link ke How To Use -->
+      <!--<p><a href="#howto" class="howto-link">💡 Lihat cara pakai</a></p>-->
 
+      <!-- HOW TO USE SECTION -->
+      <section class="howto" id="howto">
+        <h3>⚙️ HOW TO USE</h3>
+        <ol>
+          <li>🧩 Upload file PDF biasa untuk dienkripsi.</li>
+          <li>🔐 Masukkan password unik (ingat baik-baik).</li>
+          <li>🚀 Klik tombol <b>Encrypt & Download</b> — file terenkripsi siap diunduh.</li>
+          <li>💾 Untuk membuka kembali, upload file terenkripsi.</li>
+          <li>🪄 Masukkan password yang sama → klik <b>Decrypt</b> dan boom, file terbuka.</li>
+        </ol>
 
+      </section>
+    </div>
   </div>
 </body>
 </html>
