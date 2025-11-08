@@ -94,6 +94,7 @@ python app.py
 cpp
 Salin kode
 http://127.0.0.1:5000
+LINK HOSTING : https://indramr.pythonanywhere.com/
 💡 Catatan
 Sistem ini bukan untuk keamanan nyata, hanya untuk edukasi dan riset konsep kriptografi dasar.
 
